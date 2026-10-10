@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HoloMenu | 3D Food Experience</title>
+  <script type="module"
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
+  </script>
+  <style>
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+    h1 { color: #f5c56b; }
+    model-viewer {
+      width: 100%;
+      height: 380px;
+      background: #222;
+      border-radius: 16px;
+    }
+    .price { font-size: 22px; color: #f5c56b; }
+    button {
+      padding: 14px 24px;
+      border: 0;
+      border-radius: 10px;
+      background: #f5c56b;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>HoloMenu</h1>
+  <p>Explore your favourite food in 3D</p>
+
+  <h2>Classic Burger</h2>
+  <p class="price">₹199</p>
+
+  <model-viewer
+    src="./hamburger-060fd6.glb"
+    alt="3D model of a burger"
+    camera-controls
+    auto-rotate
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    shadow-intensity="1">
+    <button slot="ar-button">View on Your Table in AR</button>
+  </model-viewer>
+
+  <p>Rotate the burger with your finger. On a compatible phone,
+  tap the AR button to view it in your space.</p>
+</body>
+</html>
